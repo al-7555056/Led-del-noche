@@ -7,6 +7,7 @@ input.onButtonPressed(Button.A, function () {
     } else {
         basic.showString("ON")
         Interruptor = true
+        Cambio = false
         if (control2) {
             basic.showString("CM")
         } else {
@@ -19,6 +20,7 @@ input.onButtonPressed(Button.A, function () {
             # # # # #
             # # # # #
             `)
+        Cambio = true
     }
 })
 input.onButtonPressed(Button.B, function () {
