@@ -66,7 +66,7 @@ basic.forever(function () {
                 led.setBrightness(0)
             }
         } else {
-            led.setBrightness(input.lightLevel())
+            led.setBrightness(255 - input.lightLevel())
         }
     } else {
         led.setBrightness(255)
