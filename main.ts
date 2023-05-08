@@ -24,31 +24,33 @@ input.onButtonPressed(Button.A, function () {
     Cambio = true
 })
 input.onButtonPressed(Button.B, function () {
-    basic.clearScreen()
-    Cambio = false
-    led.setBrightness(255)
-    if (control2) {
-        basic.showString("LM")
-        control2 = false
-        basic.showLeds(`
-            # # # # #
-            # # # # #
-            # # # # #
-            # # # # #
-            # # # # #
-            `)
-    } else {
-        basic.showString("CM")
-        control2 = true
-        basic.showLeds(`
-            # # # # #
-            # # # # #
-            # # # # #
-            # # # # #
-            # # # # #
-            `)
+    if (Interruptor) {
+        basic.clearScreen()
+        Cambio = false
+        led.setBrightness(255)
+        if (control2) {
+            basic.showString("LM")
+            control2 = false
+            basic.showLeds(`
+                # # # # #
+                # # # # #
+                # # # # #
+                # # # # #
+                # # # # #
+                `)
+        } else {
+            basic.showString("CM")
+            control2 = true
+            basic.showLeds(`
+                # # # # #
+                # # # # #
+                # # # # #
+                # # # # #
+                # # # # #
+                `)
+        }
+        Cambio = true
     }
-    Cambio = true
 })
 let Interruptor = false
 let Cambio = false
